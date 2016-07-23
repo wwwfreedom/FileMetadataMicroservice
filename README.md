@@ -1,28 +1,16 @@
-# FileMetadataMicroservice
-
-# FreeCodeCamp API Basejump: Image Search Abstraction Layer
+# FreeCodeCamp API Basejump: File Metadata Microservice
 
 ## User stories:
 
-* I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
+* I can submit a FormData object that includes a file upload.
 
-* I can paginate through the responses by adding a ?offset=2 parameter to the URL.
-* I can get a list of the most recently submitted search strings
+* When I submit something, I will receive the file size in bytes within the JSON response
 
 ## Example usage:
-
-```html
-https://kevinimgsearch.herokuapp.com/latest/imgsearch
-```
-```html
-https://kevinimgsearch.herokuapp.com/imgsearch/some_search_term?offset=2
-```
+Just upload a small file and you receive the filesize in bytes.
 
 ## Example output:
 
 ```json
-{ searchTerm: "dog", time: "Fri Jul 22 2016 22:07:51 GMT+0930 (ACST)" }
-```
-```json
-{ url: "http://i.imgur.com/ikzPcK3.gif", alt_text: "Cat fail big time" }
+{ "filesize": "99226 bytes" }
 ```

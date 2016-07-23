@@ -1,8 +1,20 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 FreeCodeCamp API Basejump: File Metadata Microservice
+  br
+  h3 User stories:
+  p I can submit a FormData object that includes a file upload.
+  p When I submit something, I will receive the file size in bytes within the JSON response
+  br
+  h3 Example usage:
+  p Just upload a small file and you receive the filesize in bytes.
+  h3 Example output:
+  code { "filesize": "99226 bytes" }
+  br
+  br
   form(action='/fileupload', enctype="multipart/form-data", method="post")
     input(type="file", name="file" required)
     input(type="submit" value="upload")
+
+
